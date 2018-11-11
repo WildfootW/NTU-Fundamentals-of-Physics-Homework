@@ -42,7 +42,7 @@ displacement = vec(0,0,0) + ball.pos - initialpoint
 ##-----print-----
 
 msg.visible = False
-msg = text(text="The displacement is " + str(displacement) + ".", pos= vec(-15, 12,0))
+msg = text(text = "The displacement is " + str(displacement) + ".", pos= vec(-15, 12,0))
 print("The displacement is " + "<" +str(displacement.x)+", "+str(displacement.y)+", "+str(displacement.z)+">")
 
 msg = text(text="It takes " + str(t) + " during the whole sport.", pos= vec(-15,11,0))
