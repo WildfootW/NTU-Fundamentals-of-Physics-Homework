@@ -1,7 +1,7 @@
 #https://www.youtube.com/watch?v=uQlFuW6Akg0&feature=youtu.be
 from vpython import *
 
-##-----preparation-----
+##-----initialize-----
 g = 9.8 #gravity
 size = 0.25 #ball's size
 
