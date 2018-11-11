@@ -24,7 +24,7 @@ path = 0 #to calculate the path
 
 ##-----sport-----
 
-dt=pow(10,-5)
+dt = pow(10,-5)
 while ball.pos.y >= size:
     rate(pow(10,5))
     #ball.pos.x = ball.pos.x + ball.v.x*dt
