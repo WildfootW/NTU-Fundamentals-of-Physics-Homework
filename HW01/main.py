@@ -23,7 +23,7 @@ t = 0 #to sum up time
 path = 0 #to calculate the path
 
 ##-----sport-----
-
+dt = 345678
 dt = pow(10,-5)
 while ball.pos.y >= size:
     rate(pow(10,5))
