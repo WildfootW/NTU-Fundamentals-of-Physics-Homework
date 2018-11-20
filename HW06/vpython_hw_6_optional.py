@@ -1,4 +1,3 @@
-
 from vpython import *
 scene = canvas(width=500, height=400, fov = 0.03, align = 'left', center=vec(0.3, 0, 0), background=vec(0.5,0.5,0)) 
 
