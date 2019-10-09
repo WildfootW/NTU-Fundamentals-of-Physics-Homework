@@ -18,8 +18,7 @@ gravity = vec(0, -1 * physical_constants['standard acceleration of gravity'][0],
 # scene
 scene = canvas(width = 960, height = 720,     # unit: pixels
                center = vec(0, 10, 0),        # camera will continually look to center
-               background = vec(0.10546875, 0.38671875, 0.17968750),
-               align = "left")                # cation will be displayed to the right of the canvas
+               background = vec(0.10546875, 0.38671875, 0.17968750))
 
 # object
 floor = box(length = 30, width = 15, height = 1, color = color.black)
