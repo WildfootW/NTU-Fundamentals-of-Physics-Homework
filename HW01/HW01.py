@@ -18,7 +18,8 @@ gravity = vec(0, -1 * physical_constants['standard acceleration of gravity'][0],
 # scene
 scene = canvas(width = 960, height = 720,     # unit: pixels
                center = vec(0, 10, 0),        # camera will continually look to center
-               background = vec(0.10546875, 0.38671875, 0.17968750))
+               background = vec(0.10546875, 0.38671875, 0.17968750),
+               align = "left")                # cation will be displayed to the right of the canvas
 
 # object
 floor = box(length = 30, width = 15, height = 1, color = color.black)
@@ -54,5 +55,11 @@ while ball.pos.y - ball.radius > 0:
     scene.caption = summarize
 
 print(summarize)
-answer_text = text(text = summarize , pos = vec(2, 10, 0), align = "left")
+
+# show answer in scene
+# warning: if the text is too long, it take vpython long time to render and sometimes will cause some problem
+text(text = "Displacement: " + str(ball.pos - ball_init_position) , pos = vec(-2, 12, 0), align = "left")
+if OPTIONAL:
+    text(text = "Duration: " + str(duration) , pos = vec(-2, 10, 0), align = "left")
+    text(text = "Path length: " + str(path_length) , pos = vec(-2, 8, 0), align = "left")
 
