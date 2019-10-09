@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
-#   GitHub: github.com/WildfootW
+#   Author: WildfootW
 #
 
 from vpython import *
