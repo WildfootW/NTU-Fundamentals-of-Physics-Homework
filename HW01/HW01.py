@@ -47,18 +47,18 @@ while ball.pos.y - ball.radius > 0:
     velocity_arrow.pos = ball.pos
     velocity_arrow.axis = ball.v / 2
 
-    summarize = "The displacement is " + str(ball.pos - ball_init_position) + ".\n"
+    summarize = "The displacement is " + str(ball.pos - ball_init_position) + "(< m, m, m>).\n"
     if OPTIONAL:
-        summarize += "The flying time in the air is " + str(duration) + ".\n"
-        summarize += "The path length is " + str(path_length) + "."
+        summarize += "The flying time in the air is " + str(duration) + "(s).\n"
+        summarize += "The path length is " + str(path_length) + "(m)."
     scene.caption = summarize
 
 print(summarize)
 
 # show answer in scene
 # warning: if the text is too long, it take vpython long time to render and sometimes will cause some problem
-text(text = "Displacement: " + str(ball.pos - ball_init_position) , pos = vec(-2, 12, 0), align = "left")
+text(text = "Displacement: " + str(ball.pos - ball_init_position), pos = vec(-2, 12, 0), align = "left")
 if OPTIONAL:
-    text(text = "Duration: " + str(duration) , pos = vec(-2, 10, 0), align = "left")
-    text(text = "Path length: " + str(path_length) , pos = vec(-2, 8, 0), align = "left")
+    text(text = "Duration: " + str(duration), pos = vec(-2, 10, 0), align = "left")
+    text(text = "Path length: " + str(path_length), pos = vec(-2, 8, 0), align = "left")
 
