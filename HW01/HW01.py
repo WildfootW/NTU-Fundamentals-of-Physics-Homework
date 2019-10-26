@@ -4,7 +4,7 @@
 #
 
 from vpython import *
-from scipy.constants import physical_constants
+#from scipy.constants import physical_constants
 
 OPTIONAL = True
 ball_init_position = vec(-15, 5, 0)
@@ -13,7 +13,7 @@ path_length = 0
 duration = 0
 
 # constant
-gravity = vec(0, -1 * physical_constants['standard acceleration of gravity'][0], 0)
+gravity = vec(0, -1 * 9.80665, 0)
 
 # scene
 scene = canvas(width = 960, height = 720,     # unit: pixels
