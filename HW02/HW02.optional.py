@@ -39,7 +39,7 @@ velocity_arrow.axis = ball.v / 2
 current_time = 0
 previous_speed = mag(ball_init_velocity)
 
-time.sleep(3) # let vpython load init state
+#time.sleep(3) # let vpython load init state
 
 # sport
 dt = 10 ** -3

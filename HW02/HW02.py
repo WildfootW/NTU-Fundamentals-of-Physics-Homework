@@ -42,7 +42,7 @@ bounce_amount = 0
 ball_max_height = 0
 current_time = 0
 
-time.sleep(3) # let vpython load init state
+#time.sleep(3) # let vpython load init state
 
 # sport
 dt = 10 ** -3
