@@ -19,7 +19,7 @@ gravity = vec(0, -1 * 9.80665, 0)
 
 # scene
 scene = canvas(width = 800, height = 600,     # unit: pixels
-               center = vec(0.4, 0.2, 0),        # camera will continually look to center
+               center = vec(0, 0.2, 0),        # camera will continually look to center
                background = vec(0.10546875, 0.38671875, 0.17968750))
 et_graph = graph(width = 800, height = 600,
                  title = "Energy - Time",
