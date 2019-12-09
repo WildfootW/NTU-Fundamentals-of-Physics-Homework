@@ -12,6 +12,7 @@ rope_spring_constant = 150000
 ball_radius = 0.02
 ball_mass = 0.5
 ball_lifted_amount = N
+ball_lifted_angle = 30 / 180 * pi
 
 # constant
 gravity = vec(0, -1 * 9.80665, 0)
@@ -47,13 +48,14 @@ for i in range(groups_amount):
 ceiling.pos = vec(0, (ceiling.height / 2), 0)
 
 for i in range(groups_amount):
-    balls[i].pos = vec(ball_radius * (groups_amount - 1) * -1 + ball_radius * i * 2, -rope_origin_length - ball_mass * gravity.y / rope_spring_constant, 0)
+    balls[i].pos = vec(ball_radius * (groups_amount - 1) * -1 + ball_radius * i * 2, -rope_origin_length - ball_mass * -gravity.y / rope_spring_constant, 0)
     ropes[i].pos = vec(balls[i].pos.x, 0, 0)
     ropes[i].axis = balls[i].pos - ropes[i].pos
 
 for i in range(ball_lifted_amount):
-    balls[i].pos.y = balls[i].pos.y / 2
-    balls[i].pos.x = balls[i].pos.x - balls[i].pos.y * -1 * sqrt(3)
+    rope_length = -balls[i].pos.y
+    balls[i].pos.x = balls[i].pos.x - rope_length * sin(ball_lifted_angle)
+    balls[i].pos.y = -rope_length * cos(ball_lifted_angle)
     ropes[i].axis = balls[i].pos - ropes[i].pos
 
 #time.sleep(3) # let vpython load init state
